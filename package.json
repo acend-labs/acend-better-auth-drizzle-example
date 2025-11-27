@@ -1,0 +1,32 @@
+{
+  "name": "acend-better-auth-drizzle-example",
+  "version": "1.0.0",
+  "module": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun run --watch src/index.ts",
+    "auth:generate": "bunx --bun @better-auth/cli generate",
+    "db:generate": "bun run --bun drizzle-kit generate",
+    "db:migrate": "bun run --bun drizzle-kit migrate",
+    "db:studio": "bun run --bun drizzle-kit studio"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/pg": "^8.15.6",
+    "drizzle-kit": "^0.31.7",
+    "tsx": "^4.20.6"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@acend/cors": "^0.1.0",
+    "@acend/openapi": "^0.1.0",
+    "@acend/scalar": "^0.1.0",
+    "acend": "^0.1.4",
+    "better-auth": "^1.4.3",
+    "drizzle-orm": "^0.44.7",
+    "pg": "^8.16.3"
+  }
+}

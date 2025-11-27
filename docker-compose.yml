@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:18.1
+    container_name: acend-postgres
+    ports:
+      - "5498:5432"
+    environment:
+      POSTGRES_PASSWORD: "acend"
+
+  redis:
+    image: redis:8.4
+    container_name: acend-redis
+    ports:
+      - "6379:6379"
+    command: ["redis-server", "--requirepass", "acend"]
